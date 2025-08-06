@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>User Registration</h1>
+    </header>
+
+    <main>
+        <!-- Registration Form Section -->
+        <section class="form-section">
+            <form id="registrationForm" novalidate>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Enter username">
+                    <span class="error-message" id="usernameError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" placeholder="Enter email">
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <div class="password-container">
+                        <input type="password" id="password" placeholder="Enter password">
+                        <button type="button" id="togglePassword">👁️</button>
+                    </div>
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+                
+                <button type="submit" id="submitBtn">Register</button>
+            </form>
+        </section>
+
+        <!-- Interactive Features Section -->
+        <section class="features">
+            <h2>Interactive Features</h2>
+            
+            <!-- Feature 1: Color Theme Picker -->
+            <div class="feature">
+                <h3>Choose Theme Color</h3>
+                <input type="color" id="themePicker" value="#4CAF50">
+                <button id="applyTheme">Apply Theme</button>
+            </div>
+            
+            <!-- Feature 2: Character Counter -->
+            <div class="feature">
+                <h3>Character Counter</h3>
+                <textarea id="messageBox" placeholder="Type something..."></textarea>
+                <p>Characters: <span id="charCount">0</span>/100</p>
+            </div>
+        </section>
+
+        <!-- Submission Results -->
+        <section id="resultsSection" class="hidden">
+            <h2>Registration Successful!</h2>
+            <div id="userData"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
